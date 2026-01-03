@@ -141,7 +141,7 @@ section {
     color: #555;
 }
 
-/* 重點數字 */
+
 .feature-box p:first-of-type {
     font-size: 32px;
     font-weight: bold;
@@ -149,23 +149,44 @@ section {
 }
 
 
-/* ===== 行程表格（重點） ===== */
+
+}
 .schedule-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.schedule-table th, .schedule-table td {
-    border: 1px solid #313d2a;
-    padding: 12px;
+    margin-top: 30px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .schedule-table th {
-    background-color: #045613;
-    color: white;
+    background: #036027;
+    color: #fff;
+    padding: 16px;
+    font-size: 18px;
 }
 
+.schedule-table td {
+    padding: 15px;
+    font-size: 17px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.schedule-table tr:last-child td {
+    border-bottom: none;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f7fbf9;
+}
+
+.schedule-time {
+    width: 25%;
+    font-weight: bold;
+    color: #036027;
+}
 
 /* ===== 按鈕 ===== */
 .btn {
@@ -185,3 +206,4 @@ footer {
     text-align: center;
     padding: 25px 0;
 }
+
