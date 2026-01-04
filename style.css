@@ -1,25 +1,27 @@
-@charset "utf-8";
+@@charset "utf-8";
+
+/* ===== 基本設定 ===== */
 body {
     font-family: "Microsoft JhengHei", Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #333;
+    background-color: #ffffff;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
-    overflow: hidden;
 }
 
-
+/* ===== Header ===== */
 header {
-    background: #036027; 
-    color: rgb(255, 255, 255);
-    padding-top: 20px;
-    min-height: 70px;
-    border-bottom: #054e1c 3px solid;
+    background: #036027;
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 3px solid #054e1c;
+    overflow: hidden; /* ⭐ 清除 float，關鍵 */
 }
 
 header h1 {
@@ -32,8 +34,14 @@ header nav {
     margin-top: 10px;
 }
 
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 header nav ul li {
-    display: inline;
+    display: inline-block;
     margin-left: 20px;
 }
 
@@ -44,18 +52,18 @@ header nav a {
     font-weight: bold;
 }
 
-
+/* ===== Hero ===== */
 .hero {
-    background-color: #ffffff;
     height: 400px;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-	background-image: url('images/山.jpg'); background-size: cover;
-	background-position: center;
-	color: rgb(193, 232, 212);
-	text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-align: center;
+    background-image: url('images/山.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(193, 232, 212);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .hero h2 {
@@ -63,28 +71,14 @@ header nav a {
     margin-bottom: 10px;
 }
 
-.btn {
-    display: inline-block;
-    background: #0f2684;
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+/* ===== 通用 Section ===== */
+section {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 18px;
 }
 
-
-section {
-    padding: 20px 0;
-    text-align: center;
-}
-   
-section {
-    padding: 20px 0;
-    text-align: center;
-    font-size: larger;
-}
-/* ===== About ===== */
+/* ===== About 區塊 ===== */
 .about-layout {
     display: flex;
     gap: 40px;
@@ -96,7 +90,6 @@ section {
 .about-text {
     flex: 1;
     min-width: 280px;
-    font-size: 18px;
 }
 
 .about-highlight {
@@ -108,7 +101,7 @@ section {
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* ===== 卡片 ===== */
+/* ===== 資訊卡片 ===== */
 .features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -141,16 +134,13 @@ section {
     color: #555;
 }
 
-
 .feature-box p:first-of-type {
     font-size: 32px;
     font-weight: bold;
     color: #036027;
 }
 
-
-
-}
+/* ===== 行程表格 ===== */
 .schedule-table {
     width: 100%;
     border-collapse: collapse;
@@ -163,7 +153,7 @@ section {
 
 .schedule-table th {
     background: #036027;
-    color: #fff;
+    color: #ffffff;
     padding: 16px;
     font-size: 18px;
 }
@@ -174,12 +164,12 @@ section {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.schedule-table tr:last-child td {
-    border-bottom: none;
-}
-
 .schedule-table tr:nth-child(even) {
     background-color: #f7fbf9;
+}
+
+.schedule-table tr:last-child td {
+    border-bottom: none;
 }
 
 .schedule-time {
@@ -192,7 +182,7 @@ section {
 .btn {
     display: inline-block;
     background: #1a6a83;
-    color: #fff;
+    color: #ffffff;
     padding: 12px 26px;
     border-radius: 8px;
     text-decoration: none;
@@ -202,8 +192,8 @@ section {
 /* ===== Footer ===== */
 footer {
     background: #063013;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 25px 0;
+    margin-top: 40px;
 }
-
